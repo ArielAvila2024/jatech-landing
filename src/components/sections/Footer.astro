@@ -27,16 +27,6 @@ import logoPrincipal from '../../assets/logos/sin_fondo/blanco/logo_principal_pn
 				<li>Dirección: AV.IRARRAZAVAL 2401 OFICINA 607</li>
 			</ul>
 		</div>
-
-		<!--<div class="footer-section">
-			<h3>Redes Sociales</h3>
-			<ul class="social-links">
-				<li><a href="#" aria-label="Facebook">Facebook</a></li>
-				<li><a href="#" aria-label="Instagram">Instagram</a></li>
-				<li><a href="#" aria-label="LinkedIn">LinkedIn</a></li>
-				<li><a href="#" aria-label="Twitter">Twitter</a></li>
-			</ul>
-		</div> -->
 	</div>
 
 	<div class="footer-bottom">
@@ -50,6 +40,11 @@ import logoPrincipal from '../../assets/logos/sin_fondo/blanco/logo_principal_pn
 		color: #ffffff;
 		padding: 3rem 2rem 1rem;
 		margin-top: 4rem;
+		transition: background-color 0.3s ease;
+	}
+
+	:global(.dark) .footer {
+		background-color: rgba(17, 24, 39, 0.95);
 	}
 
 	.footer-container {
@@ -83,8 +78,16 @@ import logoPrincipal from '../../assets/logos/sin_fondo/blanco/logo_principal_pn
 		transition: color 0.3s ease;
 	}
 
+	:global(.dark) .footer-section a {
+		color: #9ca3af;
+	}
+
 	.footer-section a:hover {
 		color: #ffffff;
+	}
+
+	:global(.dark) .footer-section a:hover {
+		color: #60a5fa;
 	}
 
 	.footer-logo {
@@ -111,6 +114,11 @@ import logoPrincipal from '../../assets/logos/sin_fondo/blanco/logo_principal_pn
 		text-align: center;
 		color: #888;
 		font-size: 0.9rem;
+	}
+
+	:global(.dark) .footer-bottom {
+		border-top-color: #4b5563;
+		color: #6b7280;
 	}
 
 	@media (max-width: 768px) {

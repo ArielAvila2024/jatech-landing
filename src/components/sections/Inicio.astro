@@ -1,6 +1,25 @@
 ---
-import logoPrincipal from '../../assets/logos/sin_fondo/negro/logo_principal_png.png';
+import logoPrincipalNegro from '../../assets/logos/sin_fondo/negro/logo_principal_png.png';
+import logoPrincipalBlanco from '../../assets/logos/sin_fondo/blanco/logo_principal_png.png';
 ---
+
+<script>
+	const logoImg = document.querySelector('.hero-image img') as HTMLImageElement;
+	const updateLogo = () => {
+		if (document.documentElement.classList.contains('dark')) {
+			if (logoImg) logoImg.src = '/assets/logos/sin_fondo/blanco/logo_principal_png.png';
+		} else {
+			if (logoImg) logoImg.src = '/assets/logos/sin_fondo/negro/logo_principal_png.png';
+		}
+	};
+	const savedTheme = localStorage.getItem('theme');
+	const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+	if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+		updateLogo();
+	}
+	const observer = new MutationObserver(updateLogo);
+	observer.observe(document.documentElement, { attributes: true, attributeFilter: ['class'] });
+</script>
 
 <section id="inicio" class="section">
 	<div class="hero-container">
@@ -16,7 +35,7 @@ import logoPrincipal from '../../assets/logos/sin_fondo/negro/logo_principal_png
 			</div>
 		</div>
 		<div class="hero-image">
-			<img src={logoPrincipal.src} alt="Jatech - Soluciones Tecnológicas" />
+			<img src={logoPrincipalNegro.src} alt="Jatech - Soluciones Tecnológicas" />
 		</div>
 	</div>
 </section>
@@ -55,11 +74,19 @@ import logoPrincipal from '../../assets/logos/sin_fondo/negro/logo_principal_png
 		line-height: 1.2;
 	}
 
+	:global(.dark) .hero-title {
+		color: #f3f4f6;
+	}
+
 	.hero-subtitle {
 		font-size: 1.25rem;
 		color: #555;
 		line-height: 1.7;
 		margin: 0;
+	}
+
+	:global(.dark) .hero-subtitle {
+		color: #d1d5db;
 	}
 
 	.hero-buttons {

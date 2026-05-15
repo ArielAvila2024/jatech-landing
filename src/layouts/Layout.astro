@@ -3,8 +3,7 @@
 import "../styles/globals.css";
 ---
 
-<!doctype html>
-<html lang="es">
+<!doctype html lang="es">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
@@ -12,9 +11,16 @@ import "../styles/globals.css";
 		<link rel="icon" href="/favicon.ico" />
 		<meta name="generator" content={Astro.generator} />
 		<title>Jatech</title>
+		<script is:inline>
+			const theme = localStorage.getItem('theme');
+			const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+			if (theme === 'dark' || (!theme && prefersDark)) {
+				document.documentElement.classList.add('dark');
+			}
+		</script>
 	</head>
-	<body>
-<div class="absolute top-0 z-[-2] h-screen w-screen bg-white bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"></div>
+	<body class="transition-colors duration-300">
+		<div class="absolute top-0 z-[-2] h-screen w-screen bg-white bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))] dark:bg-gray-900 dark:bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(0,0,0,0))]"></div>
 		<main id="main-content">
 			<slot />
 		</main>
@@ -29,6 +35,16 @@ import "../styles/globals.css";
 		height: 100%;
 		font-family: "OneST Variable", sans-serif;
 		scroll-behavior: smooth;
+	}
+
+	:global(body) {
+		background-color: #ffffff;
+		color: #333;
+	}
+
+	:global(.dark) body {
+		background-color: #111827;
+		color: #f3f4f6;
 	}
 
 	:global(section) {
@@ -48,7 +64,7 @@ import "../styles/globals.css";
 		flex: 1;
 		display: flex;
 		flex-direction: column;
-		padding-top: 90px; /* leave space for fixed navbar */
+		padding-top: 90px;
 	}
 
 	:global(body) {

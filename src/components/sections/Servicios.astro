@@ -76,6 +76,10 @@ const servicios = [
 		text-align: center;
 	}
 
+	:global(.dark) .section-title {
+		color: #f3f4f6;
+	}
+
 	.section-subtitle {
 		font-size: 1.125rem;
 		color: #666;
@@ -84,6 +88,10 @@ const servicios = [
 		max-width: 600px;
 		margin-left: auto;
 		margin-right: auto;
+	}
+
+	:global(.dark) .section-subtitle {
+		color: #d1d5db;
 	}
 
 	.servicios-grid {
@@ -99,6 +107,12 @@ const servicios = [
 		box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
 		transition: transform 0.3s ease, box-shadow 0.3s ease;
 		border: 1px solid #eee;
+	}
+
+	:global(.dark) .servicio-card {
+		background: #1f2937;
+		box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+		border-color: #374151;
 	}
 
 	.servicio-card:hover {
@@ -119,11 +133,19 @@ const servicios = [
 		margin: 0 0 0.75rem;
 	}
 
+	:global(.dark) .servicio-titulo {
+		color: #f3f4f6;
+	}
+
 	.servicio-descripcion {
 		font-size: 1rem;
 		color: #666;
 		line-height: 1.6;
 		margin: 0;
+	}
+
+	:global(.dark) .servicio-descripcion {
+		color: #d1d5db;
 	}
 
 	@media (max-width: 768px) {
