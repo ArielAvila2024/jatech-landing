@@ -1,0 +1,138 @@
+---
+const servicios = [
+	{
+		titulo: "Desarrollo Web",
+		descripcion: "Creamos sitios web y aplicaciones web modernas, responsivas y optimizadas paraconverter visitantes en clientes.",
+		icono: "🌐"
+	},
+	{
+		titulo: "Desarrollo Móvil",
+		descripcion: "Desarrollamos aplicaciones nativas y multiplataforma para iOS y Android que ofrecen una experiencia de usuario excepcional.",
+		icono: "📱"
+	},
+	{
+		titulo: "Software Personalizado",
+		descripcion: "Diseñamos y desarrollamos soluciones a medida que se adaptan perfectamente a las necesidades específicas de tu empresa.",
+		icono: "⚙️"
+	},
+	{
+		titulo: "Consultoría Tecnológica",
+		descripcion: "Te asesoramos en la selección de tecnologías y arquitecturas adecuadas para tu proyecto,最大化izando el retorno de inversión.",
+		icono: "💡"
+	},
+	{
+		titulo: "Mantenimiento y Soporte",
+		descripcion: "Mantenemos tus sistemas actualizados, seguros y funcionando de manera óptima con soporte técnico continuo.",
+		icono: "🔧"
+	},
+	{
+		titulo: "Integración de Sistemas",
+		descripcion: "Conectamos tus diferentes herramientas y plataformas para optimizar tus procesos operativos y flujos de datos.",
+		icono: "🔗"
+	}
+];
+---
+
+<section id="servicios" class="section">
+	<div class="servicios-container">
+		<h2 class="section-title">Nuestros Servicios</h2>
+		<p class="section-subtitle">
+			Ofrecemos soluciones tecnológicas integrales para impulsar la transformación digital de tu negocio.
+		</p>
+		<div class="servicios-grid">
+			{servicios.map((servicio) => (
+				<div class="servicio-card">
+					<div class="servicio-icon">{servicio.icono}</div>
+					<h3 class="servicio-titulo">{servicio.titulo}</h3>
+					<p class="servicio-descripcion">{servicio.descripcion}</p>
+				</div>
+			))}
+		</div>
+	</div>
+</section>
+
+<style>
+.section {
+		padding: 3rem 2rem;
+		width: 100%;
+		box-sizing: border-box;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		min-height: calc(100vh - 90px);
+	}
+
+	.servicios-container {
+		max-width: 1200px;
+		margin: 0 auto;
+		width: 100%;
+	}
+
+	.section-title {
+		font-size: 2.5rem;
+		font-weight: 700;
+		color: #1a1a1a;
+		margin: 0 0 1rem;
+		text-align: center;
+	}
+
+	.section-subtitle {
+		font-size: 1.125rem;
+		color: #666;
+		text-align: center;
+		margin: 0 0 3rem;
+		max-width: 600px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.servicios-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+		gap: 2rem;
+	}
+
+	.servicio-card {
+		background: #ffffff;
+		border-radius: 12px;
+		padding: 2rem;
+		box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+		transition: transform 0.3s ease, box-shadow 0.3s ease;
+		border: 1px solid #eee;
+	}
+
+	.servicio-card:hover {
+		transform: translateY(-5px);
+		box-shadow: 0 8px 30px rgba(0, 102, 204, 0.15);
+		border-color: #0066cc;
+	}
+
+	.servicio-icon {
+		font-size: 2.5rem;
+		margin-bottom: 1rem;
+	}
+
+	.servicio-titulo {
+		font-size: 1.5rem;
+		font-weight: 600;
+		color: #1a1a1a;
+		margin: 0 0 0.75rem;
+	}
+
+	.servicio-descripcion {
+		font-size: 1rem;
+		color: #666;
+		line-height: 1.6;
+		margin: 0;
+	}
+
+	@media (max-width: 768px) {
+		.section-title {
+			font-size: 2rem;
+		}
+
+		.servicios-grid {
+			grid-template-columns: 1fr;
+		}
+	}
+</style>

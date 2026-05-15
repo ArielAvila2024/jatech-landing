@@ -1,0 +1,211 @@
+---
+---
+
+<section id="contacto" class="section">
+	<div class="contacto-container">
+		<h2 class="section-title">Contáctanos</h2>
+		<p class="section-subtitle">
+			¿Tienes un proyecto en mente? Escríbenos y te ayudaremos a hacerlo realidad.
+		</p>
+
+		<form class="contact-form">
+			<div class="form-group">
+				<label for="nombre">
+					<span class="label-icon">&#128100;</span> Nombre completo
+				</label>
+				<input id="nombre" name="nombre" type="text" placeholder="Juan Pérez" required />
+			</div>
+
+			<div class="form-group">
+				<label for="email">
+					<span class="label-icon">&#9993;</span> Correo electrónico
+				</label>
+				<input id="email" name="email" type="email" placeholder="juan@ejemplo.com" required />
+			</div>
+
+			<div class="form-group">
+				<label for="telefono">
+					<span class="label-icon">&#9742;</span> Teléfono
+				</label>
+				<input id="telefono" name="telefono" type="tel" placeholder="+56 9 1234 5678" />
+			</div>
+
+			<div class="form-group">
+				<label for="mensaje">
+					<span class="label-icon">&#128172;</span> Mensaje
+				</label>
+				<textarea id="mensaje" name="mensaje" rows="5" placeholder="Cuéntanos sobre tu proyecto..." required></textarea>
+			</div>
+
+			<button type="submit" class="btn-submit">
+				<span>Enviar Mensaje</span>
+				<span class="btn-arrow">&#8594;</span>
+			</button>
+		</form>
+
+		<div class="contact-info">
+			<p><span class="info-icon">&#9993;</span> jatechltda@gmail.com</p>
+			<p><span class="info-icon">&#128205;</span> AV. IRRARRAZAVAL 2401 OFICINA 607</p>
+		</div>
+	</div>
+</section>
+
+<style>
+	.section {
+		padding: 3rem 2rem;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 100%;
+		box-sizing: border-box;
+		min-height: calc(100vh - 90px);
+	}
+
+	.contacto-container {
+		max-width: 550px;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.section-title {
+		font-size: 2.5rem;
+		font-weight: 700;
+		color: #1a1a1a;
+		margin: 0 0 0.5rem;
+		text-align: center;
+	}
+
+	.section-subtitle {
+		font-size: 1.125rem;
+		color: #666;
+		text-align: center;
+		margin: 0 0 2.5rem;
+	}
+
+	.contact-form {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		gap: 1.25rem;
+	}
+
+	.form-group {
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
+		width: 100%;
+	}
+
+	.form-group label {
+		font-weight: 600;
+		font-size: 0.95rem;
+		color: #333;
+		text-align: left;
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
+	}
+
+	.label-icon {
+		font-size: 1rem;
+	}
+
+	.form-group input,
+	.form-group textarea {
+		width: 100%;
+		padding: 1rem 1.25rem;
+		border: 1px solid #e0e0e0;
+		border-radius: 12px;
+		font-size: 1rem;
+		font-family: inherit;
+		outline: none;
+		transition: all 0.3s ease;
+		box-sizing: border-box;
+		background: #fafafa;
+	}
+
+	.form-group input:focus,
+	.form-group textarea:focus {
+		border-color: #1a1a1a;
+		box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+		background: #fff;
+	}
+
+	.form-group input::placeholder,
+	.form-group textarea::placeholder {
+		color: #aaa;
+	}
+
+	.btn-submit {
+		padding: 1rem 2.5rem;
+		background-color: #1a1a1a;
+		color: #fff;
+		border: none;
+		border-radius: 12px;
+		font-weight: 600;
+		font-size: 1rem;
+		cursor: pointer;
+		transition: all 0.3s ease;
+		margin-top: 1rem;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 0.75rem;
+	}
+
+	.btn-submit:hover {
+		background-color: #333;
+		transform: translateY(-2px);
+		box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+	}
+
+	.btn-submit:active {
+		transform: translateY(0);
+	}
+
+	.btn-arrow {
+		font-size: 1.25rem;
+		transition: transform 0.3s ease;
+	}
+
+	.btn-submit:hover .btn-arrow {
+		transform: translateX(4px);
+	}
+
+	.contact-info {
+		margin-top: 2.5rem;
+		text-align: center;
+		color: #666;
+		display: flex;
+		flex-direction: column;
+		gap: 0.75rem;
+	}
+
+	.contact-info p {
+		margin: 0;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 0.5rem;
+	}
+
+	.info-icon {
+		font-size: 1rem;
+	}
+
+	@media (max-width: 640px) {
+		.section-title {
+			font-size: 2rem;
+		}
+
+		.contacto-container {
+			max-width: 100%;
+		}
+
+		.btn-submit {
+			width: 100%;
+		}
+	}
+</style>

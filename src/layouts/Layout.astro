@@ -1,0 +1,59 @@
+---
+//import "@fontsource-variable/onest";
+import "../styles/globals.css";
+---
+
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" href="/favicon.ico" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Jatech</title>
+	</head>
+	<body>
+<div class="absolute top-0 z-[-2] h-screen w-screen bg-white bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"></div>
+		<main id="main-content">
+			<slot />
+		</main>
+	</body>
+</html>
+
+<style>
+	:global(html, body) {
+		margin: 0;
+		padding: 0;
+		width: 100%;
+		height: 100%;
+		font-family: "OneST Variable", sans-serif;
+		scroll-behavior: smooth;
+	}
+
+	:global(section) {
+		min-height: calc(100vh - 90px);
+		padding: 3rem 2rem;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		scroll-margin-top: 90px;
+		width: 100%;
+		box-sizing: border-box;
+		position: relative;
+	}
+
+	#main-content {
+		flex: 1;
+		display: flex;
+		flex-direction: column;
+		padding-top: 90px; /* leave space for fixed navbar */
+	}
+
+	:global(body) {
+		display: flex;
+		flex-direction: column;
+		min-height: 100vh;
+	}
+</style>

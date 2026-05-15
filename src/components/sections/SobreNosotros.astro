@@ -1,0 +1,155 @@
+---
+---
+
+<section id="sobre-nosotros" class="section">
+	<div class="sobre-nosotros-container">
+		<div class="sobre-nosotros-content">
+			<h2 class="section-title">¿Quiénes Somos?</h2>
+			<p class="intro-text">
+				Somos una empresa líder en soluciones tecnológicas, dedicada a transformar las ideas
+				de nuestros clientes en realidade digitales potencia
+			</p>
+			<div class="features-grid">
+				<div class="feature-item">
+					<div class="feature-number">+5</div>
+					<div class="feature-label">Años de Experiencia</div>
+				</div>
+				<div class="feature-item">
+					<div class="feature-number">+50</div>
+					<div class="feature-label">Proyectos Completados</div>
+				</div>
+				<div class="feature-item">
+					<div class="feature-number">100%</div>
+					<div class="feature-label">Clientes Satisfecos</div>
+				</div>
+			</div>
+			<div class="mission-vision">
+				<div class="mv-section">
+					<h3>Nuestra Misión</h3>
+					<p>
+						Proporcionar soluciones tecnológicas innovadoras y de alta calidad que ayuden a
+						nuestros clientes a alcanzar sus objetivos comerciales, mejorando su eficiencia
+						y competitividad en el mercado.
+					</p>
+				</div>
+				<div class="mv-section">
+					<h3>Nuestra Visión</h3>
+					<p>
+						Ser reconocidos como la empresa de referencia en desarrollo de software y soluciones
+						tecnológicas, destacando por nuestra excelencia, innovación y compromiso con el éxito
+						de nuestros clientes.
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<style>
+	.section {
+		padding: 3rem 2rem;
+		width: 100%;
+		box-sizing: border-box;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		min-height: calc(100vh - 90px);
+	}
+
+	.sobre-nosotros-container {
+		max-width: 1000px;
+		margin: 0 auto;
+		width: 100%;
+	}
+
+	.section-title {
+		font-size: 2.5rem;
+		font-weight: 700;
+		color: #1a1a1a;
+		margin: 0 0 1.5rem;
+		text-align: center;
+	}
+
+	.intro-text {
+		font-size: 1.25rem;
+		color: #555;
+		text-align: center;
+		margin: 0 0 3rem;
+		line-height: 1.7;
+	}
+
+	.features-grid {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 2rem;
+		margin-bottom: 3rem;
+	}
+
+	.feature-item {
+		text-align: center;
+		padding: 1.5rem;
+		background: #f8f9fa;
+		border-radius: 12px;
+		border: 1px solid #e9ecef;
+	}
+
+	.feature-number {
+		font-size: 2.5rem;
+		font-weight: 700;
+		color: #0066cc;
+		margin-bottom: 0.5rem;
+	}
+
+	.feature-label {
+		font-size: 1rem;
+		color: #666;
+		font-weight: 500;
+	}
+
+	.mission-vision {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 2rem;
+	}
+
+	.mv-section {
+		padding: 2rem;
+		background: #ffffff;
+		border-radius: 12px;
+		box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+		border: 1px solid #eee;
+	}
+
+	.mv-section h3 {
+		font-size: 1.5rem;
+		font-weight: 600;
+		color: #1a1a1a;
+		margin: 0 0 1rem;
+	}
+
+	.mv-section p {
+		font-size: 1rem;
+		color: #666;
+		line-height: 1.7;
+		margin: 0;
+	}
+
+	@media (max-width: 768px) {
+		.section-title {
+			font-size: 2rem;
+		}
+
+		.features-grid {
+			grid-template-columns: 1fr;
+			gap: 1rem;
+		}
+
+		.mission-vision {
+			grid-template-columns: 1fr;
+		}
+
+		.intro-text {
+			font-size: 1.1rem;
+		}
+	}
+</style>

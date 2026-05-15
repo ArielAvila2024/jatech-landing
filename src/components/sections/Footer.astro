@@ -1,0 +1,138 @@
+---
+import logoPrincipal from '../../assets/logos/sin_fondo/blanco/logo_principal_png.png';
+---
+
+<footer class="footer">
+	<div class="footer-container">
+		<div class="footer-section">
+			<img src={logoPrincipal.src} alt="Logo Principal" class="footer-logo" />
+			<p>Construyendo el software que tu negocio necesita.</p>
+		</div>
+
+		<div class="footer-section">
+			<h3>Enlaces Rápidos</h3>
+			<ul>
+				<li><a href="/">Inicio</a></li>
+				<li><a href="#servicios">Servicios</a></li>
+				<li><a href="#sobre-nosotros">Sobre Nosotros</a></li>
+				<li><a href="#contacto">Contacto</a></li>
+			</ul>
+		</div>
+
+		<div class="footer-section">
+			<h3>Contacto</h3>
+			<ul>
+				<li>Email: <a href="mailto:jatechltda@gmail.com">jatechltda@gmail.com</a></li>
+				<!-- <li>Teléfono: <a href="tel:+1234567890">+1 (234) 567-890</a></li> -->
+				<li>Dirección: AV.IRARRAZAVAL 2401 OFICINA 607</li>
+			</ul>
+		</div>
+
+		<!--<div class="footer-section">
+			<h3>Redes Sociales</h3>
+			<ul class="social-links">
+				<li><a href="#" aria-label="Facebook">Facebook</a></li>
+				<li><a href="#" aria-label="Instagram">Instagram</a></li>
+				<li><a href="#" aria-label="LinkedIn">LinkedIn</a></li>
+				<li><a href="#" aria-label="Twitter">Twitter</a></li>
+			</ul>
+		</div> -->
+	</div>
+
+	<div class="footer-bottom">
+		<p>&copy; 2026 JATECH. Todos los derechos reservados.</p>
+	</div>
+</footer>
+
+<style>
+	.footer {
+		background-color: #1a1a1a;
+		color: #ffffff;
+		padding: 3rem 2rem 1rem;
+		margin-top: 4rem;
+	}
+
+	.footer-container {
+		max-width: 1200px;
+		margin: 0 auto;
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+		gap: 2rem;
+		margin-bottom: 2rem;
+	}
+
+	.footer-section h3 {
+		margin-top: 0;
+		margin-bottom: 1rem;
+		font-size: 1.1rem;
+	}
+
+	.footer-section ul {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+	}
+
+	.footer-section li {
+		margin-bottom: 0.5rem;
+	}
+
+	.footer-section a {
+		color: #b3b3b3;
+		text-decoration: none;
+		transition: color 0.3s ease;
+	}
+
+	.footer-section a:hover {
+		color: #ffffff;
+	}
+
+	.footer-logo {
+		height: 50px;
+		width: auto;
+		margin-bottom: 1rem;
+	}
+
+	.footer-section p {
+		margin: 0;
+		color: #b3b3b3;
+		line-height: 1.6;
+	}
+
+	.social-links {
+		display: flex;
+		gap: 1rem;
+		flex-wrap: wrap;
+	}
+
+	.footer-bottom {
+		border-top: 1px solid #333;
+		padding-top: 1rem;
+		text-align: center;
+		color: #888;
+		font-size: 0.9rem;
+	}
+
+	@media (max-width: 768px) {
+		.footer-container {
+			grid-template-columns: 1fr;
+		}
+
+		.footer-section {
+			text-align: center;
+		}
+
+		.footer-logo {
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		.social-links {
+			justify-content: center;
+		}
+
+		.footer {
+			padding: 2rem 1rem 1rem;
+		}
+	}
+</style>
