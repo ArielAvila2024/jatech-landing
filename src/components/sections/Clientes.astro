@@ -1,0 +1,174 @@
+---
+const clientes = [
+	{
+		nombre: "TechCorp",
+		descripcion: "Empresa líder en soluciones tecnológicas para pequeñas y medianas empresas.",
+		imagen: "https://images.unsplash.com/photo-1560179707-f14e90ef3623?w=400&h=400&fit=crop"
+	},
+	{
+		nombre: "InnovaSoft",
+		descripcion: "Desarrolladora de software especializada en aplicaciones empresariales.",
+		imagen: "https://images.unsplash.com/photo-1497366216548-37526070297c?w=400&h=400&fit=crop"
+	},
+	{
+		nombre: "DataSystems",
+		descripcion: "Consultora en análisis de datos e inteligencia empresarial.",
+		imagen: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400&h=400&fit=crop"
+	},
+	{
+		nombre: "CloudTech",
+		descripcion: "Proveedor de servicios en la nube y infraestructura escalable.",
+		imagen: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=400&h=400&fit=crop"
+	}
+];
+---
+
+<section id="clientes" class="section">
+	<div class="clientes-container">
+		<h2 class="section-title">Nuestros Clientes</h2>
+		<p class="section-subtitle">
+			Empresas que confían en nosotros para transformar digitalmente sus negocios.
+		</p>
+		<div class="clientes-grid">
+			{clientes.map((cliente) => (
+				<div class="cliente-card">
+					<div class="cliente-imagen-container">
+						<img 
+							src={cliente.imagen} 
+							alt={cliente.nombre}
+							class="cliente-imagen"
+						/>
+					</div>
+					<h3 class="cliente-nombre">{cliente.nombre}</h3>
+					<p class="cliente-descripcion">{cliente.descripcion}</p>
+				</div>
+			))}
+		</div>
+	</div>
+</section>
+
+<style>
+	.section {
+		padding: 3rem 2rem;
+		width: 100%;
+		box-sizing: border-box;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		min-height: calc(100vh - 90px);
+	}
+
+	.clientes-container {
+		max-width: 1200px;
+		margin: 0 auto;
+		width: 100%;
+	}
+
+	.section-title {
+		font-size: 2.5rem;
+		font-weight: 700;
+		color: #1a1a1a;
+		margin: 0 0 1rem;
+		text-align: center;
+	}
+
+	:global(.dark) .section-title {
+		color: #f3f4f6;
+	}
+
+	.section-subtitle {
+		font-size: 1.125rem;
+		color: #666;
+		text-align: center;
+		margin: 0 0 3rem;
+		max-width: 600px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	:global(.dark) .section-subtitle {
+		color: #d1d5db;
+	}
+
+	.clientes-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+		gap: 2rem;
+	}
+
+	.cliente-card {
+		background: #ffffff;
+		border-radius: 12px;
+		padding: 1.5rem;
+		box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+		transition: transform 0.3s ease, box-shadow 0.3s ease;
+		border: 1px solid #eee;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+	}
+
+	:global(.dark) .cliente-card {
+		background: #1f2937;
+		box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+		border-color: #374151;
+	}
+
+	.cliente-card:hover {
+		transform: translateY(-5px);
+		box-shadow: 0 8px 30px rgba(0, 102, 204, 0.15);
+		border-color: #0066cc;
+	}
+
+	.cliente-imagen-container {
+		width: 120px;
+		height: 120px;
+		border-radius: 50%;
+		overflow: hidden;
+		margin-bottom: 1rem;
+		border: 3px solid #e5e7eb;
+	}
+
+	:global(.dark) .cliente-imagen-container {
+		border-color: #374151;
+	}
+
+	.cliente-imagen {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+
+	.cliente-nombre {
+		font-size: 1.25rem;
+		font-weight: 600;
+		color: #1a1a1a;
+		margin: 0 0 0.75rem;
+	}
+
+	:global(.dark) .cliente-nombre {
+		color: #f3f4f6;
+	}
+
+	.cliente-descripcion {
+		font-size: 0.95rem;
+		color: #666;
+		line-height: 1.6;
+		margin: 0;
+	}
+
+	:global(.dark) .cliente-descripcion {
+		color: #d1d5db;
+	}
+
+	@media (max-width: 768px) {
+		.section-title {
+			font-size: 2rem;
+		}
+
+		.clientes-grid {
+			grid-template-columns: 1fr;
+		}
+	}
+</style>
