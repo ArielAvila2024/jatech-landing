@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Fila JatechStore.cl</title>
+<title>www.JatechStore.cl</title>
 <style>
 :root{--bg:#f5f5f7;--card:#fff;--text:#1d1d1f;--muted:#6e6e73;--accent:#4f46e5;--track:#e5e7eb;--dot:#c7c9d1;
 box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
@@ -82,10 +82,13 @@ function start() {
     if (el >= waitMs) {
       clearInterval(timer);
       $("title").textContent = "¡Es tu turno!";
-      $("msg").textContent = "Ya puedes continuar.";
+      $("msg").textContent = "Redirigiendo...";
       $("pos").textContent = "1"; drawLine(1);
       $("time").textContent = "Esperaste " + (waitMs / 1000).toFixed(1) + " s";
-      $("again").style.display = "inline-block";
+      //$("again").style.display = "inline-block";
+      setTimeout(() => {
+       ir();
+     }, 4000);
     }
   }, 150);
 }
